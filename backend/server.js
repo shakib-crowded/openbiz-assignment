@@ -9,12 +9,18 @@ dotenv.config();
 
 const app = express();
 
-app.use(
-  cors({
-    origin: process.env.FRONTEND_URL || "http://localhost:3000",
-    credentials: true,
-  })
-);
+const corsOptions = {
+  origin: [
+    "https://openbiz-assignment-delta.vercel.app", // This is my frontend url
+    "http://localhost:3000", // This is for local development
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true,
+  optionsSuccessStatus: 200, // For legacy browser support
+};
+
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
 mongoose
