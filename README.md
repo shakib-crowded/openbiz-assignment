@@ -1,141 +1,161 @@
-# Open Biz Assignment
+# 🚀 Open Biz Assignment
 
-A responsive UI form mimicking the Udyam registration process with Aadhaar and PAN verification.
+A **responsive multi-step UI form** inspired by the _Udyam Registration_ process, featuring **Aadhaar** and **PAN** verification with OTP authentication.
 
-## Features
+---
 
-- Aadhaar number verification with OTP authentication
-- PAN card number validation
-- Multi-step form with progress tracking
-- Responsive design for all devices
-- Secure backend API with proper validation
+## ✨ Features
 
-## Tech Stack
+- 🔐 **Aadhaar Number Verification** with OTP authentication
+- 🆔 **PAN Card Number Validation**
+- 🧩 **Multi-step Form** with progress tracking
+- 📱 **Responsive Design** for all devices
+- 🛡️ **Secure Backend API** with proper validation
 
-**Frontend:**
+---
 
-- React.js with Vite
-- Material-UI (MUI) for UI components
-- Formik & Yup for form handling
-- Axios for API calls
+## 🛠 Tech Stack
 
-**Backend:**
+**Frontend**
 
-- Node.js with Express
-- MongoDB for database
-- Mongoose for ODM
+- ⚛️ React.js (Vite)
+- 🎨 Material-UI (MUI)
+- 📝 Formik + Yup (Form handling & validation)
+- 🔗 Axios (API calls)
 
-## Live Demo
+**Backend**
 
-- Frontend: [Vercel App](https://openbiz-assignment-delta.vercel.app)
-- Backend API: [Render Service](https://openbiz-assignment.onrender.com)
+- 🟩 Node.js with Express
+- 🍃 MongoDB + Mongoose (ODM)
 
-## Setup Instructions
+---
 
-### Prerequisites
+## 🌐 Live Demo
 
-- Node.js (v16 or higher)
+- **Frontend:** [Vercel App](https://openbiz-assignment-delta.vercel.app)
+- **Backend API:** [Render Service](https://openbiz-assignment.onrender.com)
+
+---
+
+## 📦 Setup Instructions
+
+### ✅ Prerequisites
+
+- Node.js (v16+)
 - MongoDB Atlas account
 - Git
 
-### Local Development
+---
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/shakib-crowded/openbiz-assignment.git
-   ```
-2. **Setup Backend**
-   cd backend
-   npm install
-   cp .env.example .env
+### 🔹 Clone the Repository
 
+```bash
+git clone https://github.com/shakib-crowded/openbiz-assignment.git
+🔹 Backend Setup
+
+cd backend
+npm install
+cp .env.example .env
 Edit .env with your MongoDB credentials and other settings.
 
-3. **Setup Frontend**
-   cd ../frontend
-   npm install
-   cp .env.example .env.local
+Example .env
 
-Set VITE_API_BASE_URL=http://localhost:5000 for local development
-
-4. **Run The Application.**
-   In one terminal:
-
-cd backend && npm start
-
-In another terminal:
-cd frontend && npm run dev
-
-Environment Variables
-Backend (backend/.env)
 
 MONGODB_URI=your_mongodb_connection_string
 PORT=5000
 OTP_EXPIRE_MINUTES=5
 NODE_ENV=development
-PORT=5000
 MAX_OTP_ATTEMPTS=3
 FRONTEND_URL=https://openbiz-assignment-delta.vercel.app/
+🔹 Frontend Setup
 
-Frontend (frontend/.env.local)
+cd ../frontend
+npm install
+cp .env.example .env.local
+Example .env.local
+
+
 VITE_API_BASE_URL=http://localhost:5000/api/registration
+🖥 Local Development
+In one terminal:
 
-Deployment
-Backend Deployment (Render)
-Connect your GitHub repository to Render
+cd backend && npm start
+In another terminal:
 
-Set environment variables
+cd frontend && npm run dev
+🚀 Deployment
+Backend (Render)
+Connect GitHub repository to Render
 
-Set build command: npm install
+Root Directory: backend
 
-Set start command: node server.js
+Build Command:
 
-Frontend Deployment (Vercel)
-Import your GitHub repository
+npm install
+Start Command:
 
-Set root directory to client
+node server.js
+Add all environment variables from .env
 
-Set build command: npm run build
+Frontend (Vercel)
+Import GitHub repository into Vercel
 
-Set output directory: dist
+Root Directory: frontend
 
-Add environment variables
+Build Command:
 
-API Endpoints
-Endpoint Method Description
-/api/registration/verify-aadhaar POST Send OTP to Aadhaar number
-/api/registration/verify-otp POST Verify Aadhaar OTP
-/api/registration/verify-pan POST Validate PAN number
-/api/registration/submit POST Submit complete registration
-Project Structure
-text
+npm run build
+Output Directory: dist
+
+Set environment variable:
+
+
+VITE_API_BASE_URL=https://<your-backend-url>/api/registration
+📡 API Endpoints
+Endpoint	Method	Description
+/api/registration/verify-aadhaar	POST	Send OTP to Aadhaar number
+/api/registration/verify-otp	POST	Verify Aadhaar OTP
+/api/registration/verify-pan	POST	Validate PAN number
+/api/registration/submit	POST	Submit complete registration
+
+📂 Project Structure
+
 openbiz-assignment/
-├── frontend/ # Frontend code
-│ ├── public/ # Static assets
-│ ├── src/ # React components
-│ ├── vite.config.js # Vite configuration
-├── backend/ # Backend code
-│ ├── controllers/ # Route controllers
-│ ├── models/ # MongoDB models
-│ ├── routes/ # API routes
-│ ├── server.js # Express app
+├── frontend/              # Frontend code
+│   ├── public/            # Static assets
+│   ├── src/               # React components
+│   └── vite.config.js     # Vite configuration
+│
+├── backend/               # Backend code
+│   ├── controllers/       # Route controllers
+│   ├── models/            # MongoDB models
+│   ├── routes/            # API routes
+│   └── server.js          # Express app entry point
+│
 ├── .gitignore
 └── README.md
-Contributing
+🤝 Contributing
 Fork the project
 
-Create your feature branch (git checkout -b feature/AmazingFeature)
+Create your feature branch
 
-Commit your changes (git commit -m 'Add some amazing feature')
+git checkout -b feature/AmazingFeature
+Commit your changes
 
-Push to the branch (git push origin feature/AmazingFeature)
 
+git commit -m 'Add some amazing feature'
+Push to the branch
+
+
+git push origin feature/AmazingFeature
 Open a Pull Request
 
-License
+📜 License
 Distributed under the MIT License. See LICENSE for more information.
 
-Contact
-Shakib Ansari - shakibansari7405@gmail.com
+📬 Contact
+Shakib Ansari
+📧 Email: shakibansari7405@gmail.com
+🔗 Project Link: https://openbiz-assignment-delta.vercel.app/
 
-Project Link: https://openbiz-assignment-delta.vercel.app/
+```
